@@ -1,0 +1,20 @@
+{
+  "name": "dreamfood",
+  "version": "1.0.0",
+  "description": "- Создать базовую логику проекта:     1. Создать конфигурационный файл     2. Создать основной файл сервера     3. Views(pug)     4. Routes     5. Public      - css(stylus)      -js      -images     6. Проект готов - Создать CSV с данными (подумать в каком формате работать с данными) - Отобразить данные на главной страницы в виде карточки - Расформировать данные по категориям - Сделать страницу для каждой категории - Создать страницу, которая добавляет данные - Создать страницу для отображения каждого товара(продукта) - Создать админку, где можно увидеть все возможные товары, изменить или удалить товар",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liana-Abr/dream-food.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Liana-Abr/dream-food/issues"
+  },
+  "homepage": "https://github.com/Liana-Abr/dream-food#readme"
+}
