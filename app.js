@@ -19,3 +19,5 @@ app.use(express.static("./public"))
 app.use("/", serverRouter);
 
 app.listen(port);
+
+//запушить новую версию на гит git add . git commit -m "комментарий" git push origin master
