@@ -7,10 +7,9 @@ body {
   flex-direction: column;
 }
 body h2 {
-  
-  color: #f00;
+  color: #e7a05e;
 }
 body>h1 {
-  color: #00f;
+  color: #92c596;
   text-align: center;
 }

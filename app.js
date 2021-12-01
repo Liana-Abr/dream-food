@@ -5,6 +5,9 @@ const stylus = require("stylus");
 const port = process.env.PORT || 3000;
 const app = express();
 
+
+app.use(express.json());
+
 app.use(stylus.middleware({
     //откуда куда
     src: "./public",
@@ -15,6 +18,7 @@ app.set("views", "./server/views");
 app.set("view engine", "pug");
 
 app.use(express.static("./public"))
+
 
 app.use("/", serverRouter);
 
