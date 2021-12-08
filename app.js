@@ -1,5 +1,6 @@
 const express = require("express");
-const serverRouter = require("./server/routes/mainRouter")
+const serverRouter = require("./server/routes/mainRouter");
+const dbRouter = require("./server/routes/dbRoutes");
 const stylus = require("stylus");
 
 const port = process.env.PORT || 3000;
@@ -21,6 +22,7 @@ app.use(express.static("./public"))
 
 
 app.use("/", serverRouter);
+app.use("/api", dbRouter);
 
 app.listen(port);
 

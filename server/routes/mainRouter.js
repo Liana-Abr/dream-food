@@ -29,9 +29,12 @@ for(let i = 1;i< data.length;i++ ){
     products.push(new Product(data[i].split(";")));
 }
 router.post("/add", (req,res) =>{
-    console.log(req.body) //получить тело формы
+    console.log(req.body) 
+    //получить тело формы
+
     res.send({msg: "done"});
 });
+
 
 router.get("/", (req,res) =>{
     res.render("index", {
@@ -40,4 +43,9 @@ router.get("/", (req,res) =>{
     });
 });
 
+router.get("/vegetables", (req, res) => {
+    res.render("category", {
+        title: "Овощи"
+    });
+});
 module.exports = router;
