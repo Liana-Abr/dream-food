@@ -1,4 +1,6 @@
 const router = require("express").Router();
+const e = require("express");
+const { ConnectionCheckedInEvent } = require("mongodb");
 const db = require("./db.js");
 
 
@@ -13,15 +15,16 @@ router.post("/add",(req,res) =>{
             const table = client.db("food");
             const col = table.collection("products");
             col.insertOne(req.body, err =>{
-                if (err) {
+                 if (err) {
                     console.log(err);
-                    client.close();
-                } else {
-                    client.close();
+                     client.close();
+                 } else {
+                     console.log(req.body);
+                     client.close();
 
-                }
-            });
-
+             }
+             });
+            console.log("aaa");
         }
     })
     res.send({msg: "done"});
@@ -45,6 +48,23 @@ router.get("/vegetables", (req,res) =>{
         }
         client.close()
     })
+
+});
+router.delete("/del/:id", (req,res) => {
+    const client = db();
+    client.connect(err =>{
+        if(err) {
+            console.log(err);
+            client.close();
+        } else {
+            const col = client.db("food").collection("products");
+            console.log(req.params);
+            col.deleteOne({"_id": req.params.id});
+            client.close();
+            res.send({"msg": "ok"});
+        }
+   
+    });
 
 });
 module.exports = router;

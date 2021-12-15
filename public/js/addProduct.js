@@ -14,7 +14,7 @@ addForm.addEventListener("submit", e =>{
     sendForm(body, e.target.method, "/api/add");
 });
 
-const sendForm = async(body, method, path) => {
+const sendForm = async (body, method, path) => {
     let response = await fetch(path, {
         method: method,
         headers: {
